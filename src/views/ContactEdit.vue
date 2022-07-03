@@ -32,7 +32,7 @@ export default {
         console.log(error);
         // Chuyển sang trang NotFound đồng thời giữ cho URL không đổi
         this.$router.push({
-          name: "notfound",
+          name: "notFound",
           params: {
             pathMatch: this.$route.path.split("/").slice(1)
           },

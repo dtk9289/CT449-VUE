@@ -27,13 +27,17 @@
       </label>
     </div>
     <div class="form-group">
-      <button class="btn btn-primary">Lưu</button>
+      <button class="btn btn-primary">
+        <span v-if="contactLocal._id">Lưu</span>
+        <span v-else>Thêm mới</span>
+        </button>
       <button v-if="contactLocal._id" type="button" class="ml-2 btn btn-danger" @click="deleteContact">
         Xóa
       </button>
     </div>
   </Form>
 </template>
+
 <script>
 import * as yup from "yup";
 import { Form, Field, ErrorMessage } from "vee-validate";
